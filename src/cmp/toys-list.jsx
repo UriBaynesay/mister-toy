@@ -2,8 +2,8 @@ import { ToyPreview } from "./toy-preview";
 
 export function ToysList({ toys }) {
   return (
-    <div className="toys-list-container grid">
-      <ul>
+    <div className="toys-list-container">
+      <ul className="grid">
         {toys.map((toy) => {
           return (
             <li key={toy._id}>

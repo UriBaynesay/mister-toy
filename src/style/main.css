@@ -22,10 +22,17 @@ body {
     color: rgba(58, 57, 57, 0.938);
     font-family: Barlow,Arial,Helvetica,sans-serif;
     font-weight: lighter;
+    font-size: 1rem;
 }
 
 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+button{
+    background-color:transparent;
+    cursor: pointer;
+    border: none;
 }

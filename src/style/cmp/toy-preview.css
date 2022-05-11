@@ -1,0 +1,12 @@
+.toy-preview-container{
+    border-radius: 0.5em;
+    border: 1px solid lightgray;
+}
+
+.toy-preview-container img{
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.toy-preview-container >*:not(:first-child){
+    padding-inline:1em;
+}

@@ -1,3 +1,11 @@
 .flex{
     display: flex;
 }
+
+.grid{
+    display: grid;
+}
+
+ul >*{
+    list-style: none;
+}

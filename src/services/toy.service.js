@@ -10,6 +10,7 @@ const labels = [
   "Doll",
   "Puzzle",
   "Outdoor",
+  "Battery Powered"
 ];
 
 export const toysService = {
@@ -17,6 +18,7 @@ export const toysService = {
   getById,
   save,
   remove,
+  labels
   // getEmptyCar
 };
 

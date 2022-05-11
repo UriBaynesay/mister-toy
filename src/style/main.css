@@ -1,6 +1,18 @@
+/* SETUP */
+@import url(./helper.css);
+/* PAGES */
 @import url(./cmp/root-cmp.css);
+
+/* CMP */
+@import url(./cmp/app-header.css);
+@import url(./pages/mister-toy-app.css);
+
 
 
 body {
     margin: 0;
+    box-sizing: border-box;
+    color: rgba(58, 57, 57, 0.938);
+    font-family: Barlow,Arial,Helvetica,sans-serif;
+    font-weight: lighter;
 }

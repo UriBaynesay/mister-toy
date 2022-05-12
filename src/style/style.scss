@@ -1,16 +1,16 @@
 /* SETUP */
 
-@import url(./helper.css);
+@import url(./_helper.scss);
 /* PAGES */
 
-@import url(./cmp/root-cmp.css);
-@import url(./pages/mister-toy-app.css);
+@import url(./cmp/_root-cmp.scss);
+@import url(./pages/_mister-toy-app.scss);
 
 /* CMP */
 
-@import url(./cmp/app-header.css);
-@import url(./cmp/toys-list.css);
-@import url(./cmp/toy-preview.css);
+@import url(./cmp/_app-header.scss);
+@import url(./cmp/_toys-list.scss);
+@import url(./cmp/_toy-preview.scss);
 
 
 

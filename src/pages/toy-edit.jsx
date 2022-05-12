@@ -115,7 +115,8 @@ class _ToyEdit extends React.Component {
             return (
               <button
                 key={idx}
-                style={{ color: `${this.hasLabel(label) ? "red" : ""}` }}
+                className="label-btn btn-light"
+                style={{ color: `${this.hasLabel(label) ? "gray" : ""}` }}
                 onClick={() => this.onToggleLabel(label)}
               >
                 {label}
@@ -123,7 +124,7 @@ class _ToyEdit extends React.Component {
             );
           })}
         </div>
-        <button className="save-toy-btn" onClick={this.onSave}>
+        <button className="save-toy-btn btn" onClick={this.onSave}>
           Save Toy
         </button>
       </section>

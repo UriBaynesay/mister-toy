@@ -1,0 +1,37 @@
+@mixin btn($type: regular, $bg: $clr-2, $clr: $clr-4, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: $padding;
+    line-height: 1.25;
+    font-size: em(14px);
+    font-variation-settings: "wght" 430;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+  
+    transition: background-color 0.2s;
+  
+    @if $type == regular {
+      background-color: $bg;
+      color: $clr;
+      &:hover {
+        background-color: $hover;
+      }
+    } @else if $type == dark {
+      background-color: $clr-1;
+    //   color: $clr-3;
+      &:hover {
+        background-color: darken($clr-1,8%);
+        // color: $clr-3;
+      }
+    } @else if $type == light {
+      background-color: $clr-3;
+      color: white;
+      &:hover {
+        background-color: darken($clr-3,8%);
+        // color: $clr-3;
+      }
+    }
+  }

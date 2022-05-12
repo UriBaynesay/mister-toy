@@ -25,7 +25,7 @@ class _MisterToyApp extends React.Component {
         {toys ? (
           <div>
             <Link to="/edit/">
-              <button className="add-toy-btn">
+              <button className="add-toy-btn btn">
                 Add Toy
               </button>
             </Link>

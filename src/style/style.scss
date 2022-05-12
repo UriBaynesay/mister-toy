@@ -1,47 +1,19 @@
-/* SETUP */
+// SETUP 
+@import './setup/mixin';
+@import './setup/variables';
+@import './setup/functions';
 
-@import url(./_helper.scss);
-/* PAGES */
+// BASIC
+@import './basic/base';
+@import './basic/helper';
 
-@import url(./cmp/_root-cmp.scss);
-@import url(./pages/_mister-toy-app.scss);
+// PAGES 
 
-/* CMP */
+@import './pages/mister-toy-app';
+@import './pages/edit-toy';
 
-@import url(./cmp/_app-header.scss);
-@import url(./cmp/_toys-list.scss);
-@import url(./cmp/_toy-preview.scss);
+//  CMP 
 
-
-
-
-
-body {
-    margin: 0;
-    box-sizing: border-box;
-    color: rgba(58, 57, 57, 0.938);
-    font-family: Barlow,Arial,Helvetica,sans-serif;
-    font-weight: lighter;
-    font-size: 1rem;
-}
-
-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-button{
-    background-color:transparent;
-    cursor: pointer;
-    border: none;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-main{
-    padding-inline: 5%;
-}
+@import './cmp/app-header';
+@import './cmp/toys-list';
+@import './cmp/toy-preview';

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mister-toy/static/css/main.cd21f0a9.css",
+    "main.js": "/mister-toy/static/js/main.6372a82a.js",
+    "index.html": "/mister-toy/index.html",
+    "main.cd21f0a9.css.map": "/mister-toy/static/css/main.cd21f0a9.css.map",
+    "main.6372a82a.js.map": "/mister-toy/static/js/main.6372a82a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd21f0a9.css",
+    "static/js/main.6372a82a.js"
+  ]
+}

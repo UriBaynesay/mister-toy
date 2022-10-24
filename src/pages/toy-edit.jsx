@@ -1,71 +1,70 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import { toysService } from "../services/toy.service";
-import { saveToy, removeToy } from "../store/actions/toys.action";
+import { toysService } from "../services/toy.service"
+import { saveToy, removeToy } from "../store/actions/toys.action"
 
 class _ToyEdit extends React.Component {
   state = {
     toy: {
-      name: "Talking Doll",
-      imgUrl: "https://www.babyshop.com/images/698507/card_xlarge.jpg",
-      price: 123,
-      labels: ["Doll", "Battery Powered", "Baby"],
-      createdAt: 1631031801011,
+      name: "",
+      imgUrl: "",
+      price: 0,
+      labels: [],
       inStock: true,
     },
-  };
+  }
   componentDidMount() {
-    this.loadToy();
+    this.loadToy()
   }
 
   loadToy() {
-    const { toyId } = this.props.match.params;
+    const { toyId } = this.props.match.params
     toysService.getById(toyId).then((toy) => {
-      if (!toy) return;
-      this.setState({ toy });
-    });
+      if (!toy) return
+      this.setState({ toy })
+    })
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.match.params.toyId !== this.props.match.params.toyId) {
-      this.loadToy();
+      this.loadToy()
     }
   }
 
   handleChange = ({ target }) => {
-    const field = target.name;
-    const value = target.type === "number" ? +target.value : target.value;
+    const field = target.name
+    const value = target.type === "number" ? +target.value : target.value
     this.setState((prevState) => ({
       toy: { ...prevState.toy, [field]: value },
-    }));
-  };
+    }))
+  }
 
   onToggleLabel = (label) => {
-    const { toy } = this.state;
-    const labelIdx = toy.labels.findIndex((toyLabel) => toyLabel === label);
+    const { toy } = this.state
+    const labelIdx = toy.labels.findIndex((toyLabel) => toyLabel === label)
     if (labelIdx !== -1) {
-      const newLabels = toy.labels.filter((toyLabel) => toyLabel !== label);
-      this.setState({ toy: { ...toy, labels: newLabels } });
-      return;
+      const newLabels = toy.labels.filter((toyLabel) => toyLabel !== label)
+      this.setState({ toy: { ...toy, labels: newLabels } })
+      return
     }
-    this.setState({ toy: { ...toy, labels: [...toy.labels, label] } });
-  };
+    this.setState({ toy: { ...toy, labels: [...toy.labels, label] } })
+  }
 
   hasLabel(label) {
-    const { toy } = this.state;
-    return toy.labels.find((toyLabel) => toyLabel === label);
+    const { toy } = this.state
+    return toy.labels.find((toyLabel) => toyLabel === label)
   }
 
   onSave = () => {
-    const { toy } = this.state;
-    if (!toy.name || !toy.imgUrl) return;
-    this.props.saveToy(toy);
-  };
+    const { toy } = this.state
+    if (!toy.name || !toy.imgUrl) return
+    this.props.saveToy(toy)
+  }
 
   render() {
-    const labels = toysService.labels;
-    const { toy } = this.state;
+    const labels = toysService.labels
+    const { toy } = this.state
     return (
       <section className="toy-edit-container">
         {toy._id && (
@@ -73,8 +72,8 @@ class _ToyEdit extends React.Component {
             className="remove-toy-btn"
             onClick={() => {
               this.props.removeToy(toy._id).then(() => {
-                this.props.history.push("/");
-              });
+                this.props.history.push("/")
+              })
             }}
           >
             Remove
@@ -121,23 +120,23 @@ class _ToyEdit extends React.Component {
               >
                 {label}
               </button>
-            );
+            )
           })}
         </div>
         <button className="save-toy-btn btn" onClick={this.onSave}>
           Save Toy
         </button>
       </section>
-    );
+    )
   }
 }
 
 function mapStateToProps(storeState) {
-  return {};
+  return {}
 }
 const mapDispatchToProps = {
   saveToy,
   removeToy,
-};
+}
 
-export const ToyEdit = connect(mapStateToProps, mapDispatchToProps)(_ToyEdit);
+export const ToyEdit = connect(mapStateToProps, mapDispatchToProps)(_ToyEdit)

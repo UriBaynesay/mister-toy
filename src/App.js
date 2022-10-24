@@ -1,7 +1,7 @@
 import './App.css';
 import './style/style.scss'
 
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -9,13 +9,13 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { AppHeader } from "./cmp/app-header";
 import { MisterToyApp } from "./pages/mister-toy-app";
 import { ToyEdit } from "./pages/toy-edit";
-import { inc } from "./store/actions/counter.action";
+// import { inc } from "./store/actions/counter.action";
 
-function _App(props) {
+export function App() {
   return (
     <div className="app">
-      <AppHeader/>
       <Router>
+        <AppHeader />
         <main>
           <Switch>
             <Route path="/edit/:toyId?" exact component={ToyEdit} />
@@ -24,17 +24,17 @@ function _App(props) {
         </main>
       </Router>
     </div>
-  );
+  )
 }
 
-function mapStateToProps(storeState) {
-  return {
-    count: storeState.countModule.count,
-    status: storeState.statusModule.status,
-  };
-}
-const mapDispatchToProps = {
-  inc,
-};
+// function mapStateToProps(storeState) {
+//   return {
+//     count: storeState.countModule.count,
+//     status: storeState.statusModule.status,
+//   };
+// }
+// const mapDispatchToProps = {
+//   inc,
+// };
 
-export const App = connect(mapStateToProps, mapDispatchToProps)(_App);
+// export const App = connect(mapStateToProps, mapDispatchToProps)(_App);

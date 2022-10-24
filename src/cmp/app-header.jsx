@@ -1,5 +1,11 @@
-export function AppHeader(props) {
-  return <header className="app-header flex">
-      <h1>Mister Toy</h1>
-  </header>;
+import { Link } from "react-router-dom"
+
+export function AppHeader() {
+  return (
+    <header className="app-header flex">
+      <Link to={"/"}>
+        <h1>Mister Toy</h1>
+      </Link>
+    </header>
+  )
 }

@@ -67,18 +67,6 @@ class _ToyEdit extends React.Component {
     const { toy } = this.state
     return (
       <section className="toy-edit-container">
-        {toy._id && (
-          <button
-            className="remove-toy-btn"
-            onClick={() => {
-              this.props.removeToy(toy._id).then(() => {
-                this.props.history.push("/")
-              })
-            }}
-          >
-            Remove
-          </button>
-        )}
         <div className="edit-inputs-container">
           <label>
             Name :{" "}
@@ -109,7 +97,7 @@ class _ToyEdit extends React.Component {
           </label>
         </div>
 
-        <div>
+        <div className="label-buttons-container">
           {labels.map((label, idx) => {
             return (
               <button
@@ -123,9 +111,24 @@ class _ToyEdit extends React.Component {
             )
           })}
         </div>
+
         <button className="save-toy-btn btn" onClick={this.onSave}>
           Save Toy
         </button>
+
+        {toy._id && (
+          <button
+          type="red"
+            className="remove-toy-btn btn"
+            onClick={() => {
+              this.props.removeToy(toy._id).then(() => {
+                this.props.history.push("/")
+              })
+            }}
+          >
+            Remove
+          </button>
+        )}
       </section>
     )
   }

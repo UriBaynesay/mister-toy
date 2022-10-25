@@ -1,3 +1,17 @@
-.toy-edit-container{
-    
+.toy-edit-container {
+  > * {
+    margin-block: 10px;
+  }
+  label {
+    display: block;
+    margin-block: 10px;
+  }
+  .label-buttons-container {
+    > * {
+      margin: 5px;
+    }
+  }
+  .save-toy-btn{
+    display: block;
+  }
 }

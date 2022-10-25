@@ -1,4 +1,4 @@
-@mixin btn($type: regular, $bg: $clr-2, $clr: $clr-4, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
+@mixin btn($type: regular, $bg: $clr-2, $clr: white, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -28,6 +28,14 @@
       }
     } @else if $type == light {
       background-color: $clr-3;
+      color: white;
+      &:hover {
+        background-color: darken($clr-3,8%);
+        // color: $clr-3;
+      }
+    }
+    @else if $type == red {
+      background-color: rgba(255, 0, 0, 0.486);
       color: white;
       &:hover {
         background-color: darken($clr-3,8%);

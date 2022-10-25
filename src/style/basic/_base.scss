@@ -23,6 +23,7 @@ img{
     &-light {
         @include btn($type: light);
     }
+    
 }
 
 a{
@@ -32,4 +33,8 @@ a{
 
 main{
     padding-inline: 5%;
+}
+
+ul{
+    padding: 0px;
 }

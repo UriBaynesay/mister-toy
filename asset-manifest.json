@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mister-toy/static/css/main.5f2076ae.css",
-    "main.js": "/mister-toy/static/js/main.07cbf59d.js",
+    "main.css": "/mister-toy/static/css/main.25185b11.css",
+    "main.js": "/mister-toy/static/js/main.797cf423.js",
     "index.html": "/mister-toy/index.html",
-    "main.5f2076ae.css.map": "/mister-toy/static/css/main.5f2076ae.css.map",
-    "main.07cbf59d.js.map": "/mister-toy/static/js/main.07cbf59d.js.map"
+    "main.25185b11.css.map": "/mister-toy/static/css/main.25185b11.css.map",
+    "main.797cf423.js.map": "/mister-toy/static/js/main.797cf423.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f2076ae.css",
-    "static/js/main.07cbf59d.js"
+    "static/css/main.25185b11.css",
+    "static/js/main.797cf423.js"
   ]
 }

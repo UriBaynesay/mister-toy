@@ -1,6 +1,6 @@
 # Mister Toy
 
-##Description :
+## Description :
 This is a MVC app for a toys collection.
 You can add,remove and edit the toys which are stored on the localstorage.
 
